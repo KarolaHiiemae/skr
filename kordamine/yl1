@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+# Kausta sisu väljastamine
+#
+# Sisestame kausta asukoha
+#echo -n "Sisesta kataloogi asukoht süsteemis: "
+#read kaust
+kaust=$1
+#
+for nimi in $(ls $kaust)
+do
+ if [ -f "$nimi" ]; then
+  echo "$nimi"
+ fi
+done
